@@ -162,12 +162,12 @@
 
 				    <div class="container">
 				    	<label for="uname"><b>Username</b></label>
-				    	<input type="text" placeholder="Enter Username" name="uname" required>
+				    	<input type="text" placeholder="Enter Username" name="uname" required id="name">
 
 				    	<label for="psw"><b>Password</b></label>
-				    	<input type="password" placeholder="Enter Password" name="psw" required>
+				    	<input type="password" placeholder="Enter Password" name="psw" required id="password">
 				        
-				    	<button type="submit">Login</button>
+				    	<button type="submit" onclick="redirect()">Login</button>
 				      
 				    </div>
 				</form>
@@ -225,6 +225,15 @@
 			    document.onmouseup = null;
 			    document.onmousemove = null;
 			  }
+			}
+
+			function redirect(){
+				if (document.getElementById("name").value == "Gabriel" && document.getElementById("password").value == "password") {
+
+					window.location.href = "http://ice100k.github.io/cashlessCatering/shop";
+				} else {
+					window.alert("Incorrect Username Or Password");
+				}
 			}
 		</script>
 
