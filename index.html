@@ -167,7 +167,7 @@
 					    	<label for="psw"><b>Password</b></label>
 					    	<input type="password" placeholder="Enter Password" name="psw" required id="password">
 					        
-					    	<button type="submit" onclick="redirect()">Login</button>
+					    	<button onclick="redirect()" type="submit">Login</button>
 					      
 					    </div>
 					</form>
@@ -187,7 +187,7 @@
 			function redirect(){
 				if (document.getElementById("name").value == "Gabriel" && document.getElementById("password").value == "password") {
 
-					window.location.href = "http://ice100k.github.io/cashlessCatering/shop";
+					window.location.replace("http://ice100k.github.io/cashlessCatering/shop");
 				} else {
 					window.alert("Incorrect Username Or Password");
 				}
